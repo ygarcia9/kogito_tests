@@ -12,18 +12,12 @@
   <artifactId>process-scripts-quarkus</artifactId>
   <name>Kogito Example :: Process Scripts With Quarkus</name>
   <description>Kogito scripts invocation - Quarkus</description>
-  <dependencies>        
-      <dependency>
-        <groupId>org.kie.kogito</groupId>
-        <artifactId>kogito-quarkus</artifactId>
-      </dependency>
-  </dependencies>
   <profiles>
     <profile>
       <id>kie-server</id>
       <activation>
         <activeByDefault>true</activeByDefault>
-      </activation>      
+      </activation>  
       <dependencies>
         <dependency>
           <groupId>org.kie</groupId>
@@ -131,6 +125,10 @@
         <dependency>
           <groupId>io.quarkus</groupId>
           <artifactId>quarkus-resteasy-jackson</artifactId>
+        </dependency>
+        <dependency>
+          <groupId>org.kie.kogito</groupId>
+          <artifactId>kogito-quarkus</artifactId>
         </dependency>
         <dependency>
           <groupId>io.quarkus</groupId>
