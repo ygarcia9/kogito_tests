@@ -1,6 +1,0 @@
-<kmodule xmlns="http://www.drools.org/xsd/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <kbase name="CarePlanKieBase" default="true" eventProcessingMode="stream" equalsBehavior="identity" packages="com.dxc.ohc.careplan, com.dxc.ohc.nursingplan, com.dxc.ohc, com.myspace.nursingplan">
-    <ksession name="CarePlanStatelessSession" type="stateless" default="false" clockType="realtime"/>
-    <ksession name="CarePlanStatefulSession" type="stateful" default="true" clockType="realtime"/>
-  </kbase>
-</kmodule>

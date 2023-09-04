@@ -83,6 +83,11 @@
             <artifactId>kie-maven-plugin</artifactId>
             <version>7.43.1.Final</version>
             <extensions>true</extensions>
+            <configuration>
+                    <excludes>
+                        <exclude>**src/test/java/*.*</exclude>
+                    </excludes>
+                </configuration>
           </plugin>
         </plugins>
       </build>
