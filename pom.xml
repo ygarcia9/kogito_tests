@@ -9,7 +9,7 @@
   </parent-->
   <groupId>com.dani</groupId>
   <version>1.0.0-SNAPSHOT</version>
-  <artifactId>process-scripts-quarkus</artifactId>
+  <artifactId>ProcessScriptsQuarkus</artifactId>
   <name>Kogito Example :: Process Scripts With Quarkus</name>
   <description>Kogito scripts invocation - Quarkus</description>
   <profiles>
