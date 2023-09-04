@@ -85,8 +85,11 @@
             <extensions>true</extensions>
             <configuration>
                 <excludes>
-                    <exclude>org/acme/travels/quarkus/*.java</exclude>
+                    <exclude>**/org/acme/travels/quarkus/*.java</exclude>
                 </excludes>
+                <testExcludes>
+                  <testExclude>**/org/acme/travels/quarkus/*</testExclude>
+                </testExcludes>
             </configuration>
           </plugin>
         </plugins>
