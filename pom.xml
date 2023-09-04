@@ -18,6 +18,9 @@
       <activation>
         <activeByDefault>true</activeByDefault>
       </activation>  
+      <properties>
+        <exclude.tests>**/*Test.java</exclude.tests>
+      </properties>  
       <dependencies>
         <dependency>
           <groupId>org.kie</groupId>
@@ -85,10 +88,10 @@
             <extensions>true</extensions>
             <configuration>
                 <excludes>
-                    <exclude>**/org/acme/travels/quarkus/*.java</exclude>
+                    <exclude>${exclude.tests}</exclude>
                 </excludes>
                 <testExcludes>
-                  <testExclude>**/org/acme/travels/quarkus/*</testExclude>
+                  <testExclude>${exclude.tests}</testExclude>
                 </testExcludes>
             </configuration>
           </plugin>
