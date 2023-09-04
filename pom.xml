@@ -84,10 +84,10 @@
             <version>7.43.1.Final</version>
             <extensions>true</extensions>
             <configuration>
-                    <excludes>
-                        <exclude>**src/test/java/*.*</exclude>
-                    </excludes>
-                </configuration>
+                <excludes>
+                    <exclude>org/acme/travels/quarkus/*.java</exclude>
+                </excludes>
+            </configuration>
           </plugin>
         </plugins>
       </build>
