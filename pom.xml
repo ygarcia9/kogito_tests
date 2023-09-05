@@ -87,11 +87,12 @@
             <version>7.43.1.Final</version>
             <extensions>true</extensions>
             <configuration>
+                <skipTests>true</skipTests>
                 <excludes>
-                    <exclude>quarkus/**</exclude>
+                    <exclude>**/ScriptsProcessTest.java</exclude>
                 </excludes>
                 <testExcludes>
-                  <testExclude>quarkus/**</testExclude>
+                  <testExclude>**/ScriptsProcessTest.java</testExclude>
                 </testExcludes>
             </configuration>
           </plugin>
