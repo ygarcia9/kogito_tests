@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_FaEB4CiZEDyXrrv4Y8rmxw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" xmlns:xsi="xsi" id="_w6pdUC38EDybAJ_uKBbafg" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="_nameItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_messageItem" structureRef="String"/>
-  <bpmn2:itemDefinition id="__16F818A2-76FB-4F1A-9EBA-F0E5DEED26A4_Signal1Var_refOutputXItem" structureRef="String"/>
   <bpmn2:signal id="_-1997108803" name="Signal1_ref"/>
-  <bpmn2:collaboration id="_AB301BDD-38CA-4433-9AEC-64C91CA292DC" name="Default Collaboration">
-    <bpmn2:participant id="_EFDCCE9F-E399-4797-9960-EA559256A0E3" name="Pool Participant" processRef="scripts"/>
+  <bpmn2:collaboration id="_FC318765-893A-44A3-B467-6A5E3B07DF29" name="Default Collaboration">
+    <bpmn2:participant id="_E6966D87-4723-4769-8D49-B390D9334E25" name="Pool Participant" processRef="scripts"/>
   </bpmn2:collaboration>
   <bpmn2:process id="scripts" drools:packageName="org.acme.travels" drools:version="1.0" drools:adHoc="false" name="scripts" isExecutable="true" processType="Public">
     <bpmn2:property id="name" itemSubjectRef="_nameItem" name="name"/>
@@ -41,17 +40,6 @@
     <bpmn2:intermediateCatchEvent id="_16F818A2-76FB-4F1A-9EBA-F0E5DEED26A4">
       <bpmn2:incoming>_FEBCC225-139C-47B0-BA16-7878EEE3532D</bpmn2:incoming>
       <bpmn2:outgoing>_29736977-4232-4B7E-A204-51B34172C533</bpmn2:outgoing>
-      <bpmn2:dataOutput id="_16F818A2-76FB-4F1A-9EBA-F0E5DEED26A4_Signal1Var_refOutputX" drools:dtype="String" itemSubjectRef="__16F818A2-76FB-4F1A-9EBA-F0E5DEED26A4_Signal1Var_refOutputXItem" name="Signal1Var_ref"/>
-      <bpmn2:dataOutputAssociation>
-        <bpmn2:sourceRef>_16F818A2-76FB-4F1A-9EBA-F0E5DEED26A4_Signal1Var_refOutputX</bpmn2:sourceRef>
-        <bpmn2:assignment>
-          <bpmn2:from xsi:type="bpmn2:tFormalExpression"><![CDATA[_16F818A2-76FB-4F1A-9EBA-F0E5DEED26A4_Signal1Var_refOutputX]]></bpmn2:from>
-          <bpmn2:to xsi:type="bpmn2:tFormalExpression"><![CDATA[pv_string]]></bpmn2:to>
-        </bpmn2:assignment>
-      </bpmn2:dataOutputAssociation>
-      <bpmn2:outputSet>
-        <bpmn2:dataOutputRefs>_16F818A2-76FB-4F1A-9EBA-F0E5DEED26A4_Signal1Var_refOutputX</bpmn2:dataOutputRefs>
-      </bpmn2:outputSet>
       <bpmn2:signalEventDefinition signalRef="_-1997108803"/>
     </bpmn2:intermediateCatchEvent>
     <bpmn2:endEvent id="_CFA059DC-2FC1-4151-A3EC-990F0B4E3236" name="End Process">
@@ -181,7 +169,7 @@
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_FaEB4CiZEDyXrrv4Y8rmxw</bpmn2:source>
-    <bpmn2:target>_FaEB4CiZEDyXrrv4Y8rmxw</bpmn2:target>
+    <bpmn2:source>_w6pdUC38EDybAJ_uKBbafg</bpmn2:source>
+    <bpmn2:target>_w6pdUC38EDybAJ_uKBbafg</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
