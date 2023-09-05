@@ -88,10 +88,10 @@
             <extensions>true</extensions>
             <configuration>
                 <excludes>
-                    <exclude>${exclude.tests}</exclude>
+                    <exclude>**/org/acme/travels/quarkus/*.java</exclude>
                 </excludes>
                 <testExcludes>
-                  <testExclude>${exclude.tests}</testExclude>
+                  <testExclude>**/org/acme/travels/quarkus/*.java</testExclude>
                 </testExcludes>
             </configuration>
           </plugin>
