@@ -87,11 +87,12 @@
               <excludes>
                   <exclude>**/org/acme/travels/quarkus/**</exclude>
               </excludes>
+              <skipTests>true</skipTests>
               <packagingExcludes>**/org/acme/travels/quarkus/**</packagingExcludes>                     
               <warSourceExcludes>**/org/acme/travels/quarkus/**</warSourceExcludes>
             </configuration>
           </plugin>
-          <plugin>
+          <!--plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
             <configuration>
@@ -101,7 +102,7 @@
               <packagingExcludes>**/org/acme/travels/quarkus/**</packagingExcludes>                     
               <warSourceExcludes>**/org/acme/travels/quarkus/**</warSourceExcludes>
             </configuration>
-          </plugin>
+          </plugin-->          
         </plugins>
       </build>
     </profile>
