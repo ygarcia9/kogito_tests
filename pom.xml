@@ -18,9 +18,6 @@
       <activation>
         <activeByDefault>true</activeByDefault>
       </activation>  
-      <properties>
-        <exclude.tests>**/*Test.java</exclude.tests>
-      </properties>  
       <dependencies>
         <dependency>
           <groupId>org.kie</groupId>
@@ -86,26 +83,16 @@
             <artifactId>kie-maven-plugin</artifactId>
             <version>7.43.1.Final</version>
             <extensions>true</extensions>
-            <configuration>
-                <skipTests>true</skipTests>
-                <excludes>
-                    <exclude>**/ScriptsProcessTest.java</exclude>
-                </excludes>
-                <testExcludes>
-                  <testExclude>**/ScriptsProcessTest.java</testExclude>
-                </testExcludes>
-            </configuration>
           </plugin>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
-            <configuration >
-                <excludes>
-                    <exclude>**/org/acme/travels/quarkus/ScriptsProcessTest.java</exclude>
-                </excludes>
-                  <testExcludes>
-                  <testExclude>**/org/acme/travels/quarkus/ScriptsProcessTest.java</testExclude>
-                </testExcludes>
+            <configuration>
+              <excludes>
+                  <exclude>**/org/acme/travels/quarkus/ScriptsProcessTest.java</exclude>
+              </excludes>
+              <packagingExcludes>**/org/acme/travels/quarkus/ScriptsProcessTest.java</packagingExcludes>                     
+              <warSourceExcludes>**/org/acme/travels/quarkus/ScriptsProcessTest.java</warSourceExcludes>
             </configuration>
           </plugin>
         </plugins>
