@@ -88,38 +88,26 @@
         <plugins>
           <plugin>
             <groupId>org.kie</groupId>
-            <artifactId>kie-maven-plugin</artifactId>asdasd
+            <artifactId>kie-maven-plugin</artifactId>
             <version>7.43.1.Final</version>
             <extensions>true</extensions>
             <configuration>
               <excludes>
                   <exclude>**/org/acme/travels/quarkus/**</exclude>
-              </excludes>
-              <skipTests>true</skipTests>
+              </excludes>              
               <packagingExcludes>**/org/acme/travels/quarkus/**</packagingExcludes>                     
               <warSourceExcludes>**/org/acme/travels/quarkus/**</warSourceExcludes>
             </configuration>
-          </plugin>
-          <!--plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <configuration>
-              <excludes>
-                  <exclude>**/org/acme/travels/quarkus/**</exclude>
-              </excludes>
-              <packagingExcludes>**/org/acme/travels/quarkus/**</packagingExcludes>                     
-              <warSourceExcludes>**/org/acme/travels/quarkus/**</warSourceExcludes>
-            </configuration>
-          </plugin-->
+          </plugin>          
           <plugin>
             <groupId>org.kie</groupId>
             <artifactId>kie-server-tests</artifactId>
             <version>7.43.1.Final</version>
             <configuration>
-              <jms.skip>true</jms.skip>
+               <jms.skip>true</jms.skip>
               <skipITs>true</skipITs>
               <cargo.maven.skip>true</cargo.maven.skip>
-            </configuration>
+            </configuration>       
           </plugin>
         </plugins>
       </build>
