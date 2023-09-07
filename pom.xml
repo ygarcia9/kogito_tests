@@ -14,7 +14,7 @@
   <name>Kogito Example :: Process Scripts With Quarkus</name>
   <description>Kogito scripts invocation - Quarkus</description>
   <properties>
-    <packaging.type></packaging.type>
+    <packaging.type>war</packaging.type>
   </properties>
   <profiles>
     <profile>
@@ -109,7 +109,11 @@
         </plugins>
       </build>
       <properties>
-        <packaging.type>kjar</packaging.type>        
+        <packaging.type>kjar</packaging.type>
+        <jms.skip>true</jms.skip>
+        <skipITs>true</skipITs>
+        <cargo.maven.skip>true</cargo.maven.skip>
+        <skipTests>true</skipTests>
       </properties>
     </profile>
     <profile>
