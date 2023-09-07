@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+<project xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="https://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <!--parent>
@@ -87,13 +87,13 @@
             <artifactId>kie-maven-plugin</artifactId>
             <version>7.43.1.Final</version>
             <extensions>true</extensions>
-            <configuration>
+            <!--configuration>
               <excludes>
-                  <exclude>**/org/acme/travels/quarkus/**/*Test.java</exclude>
+                  <exclude>**/*Test.java</exclude>
               </excludes>
-            </configuration>
+            </configuration-->
           </plugin>          
-          <plugin>
+          <!--plugin>
             <groupId>org.kie</groupId>
             <artifactId>kie-server-tests</artifactId>
             <version>7.43.1.Final</version>
@@ -106,6 +106,16 @@
               </testExcludes>              
            </configuration>               
           </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.9</version>
+            <configuration>
+              <excludes>
+                <exclude>**/*Test.java</exclude>
+              </excludes>
+            </configuration>
+          </plugin-->
         </plugins>
       </build>
       <properties>
