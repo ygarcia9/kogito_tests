@@ -14,7 +14,7 @@
   <name>Kogito Example :: Process Scripts With Quarkus</name>
   <description>Kogito scripts invocation - Quarkus</description>
   <properties>
-    <packaging.type>jar</packaging.type>
+    <packaging.type></packaging.type>
   </properties>
   <profiles>
     <profile>
@@ -90,9 +90,7 @@
             <configuration>
               <excludes>
                   <exclude>**/org/acme/travels/quarkus/**/*Test.java</exclude>
-              </excludes>              
-              <packagingExcludes>**/org/acme/travels/quarkus/**/*Test.java</packagingExcludes>                     
-              <warSourceExcludes>**/org/acme/travels/quarkus/**/*Test.java</warSourceExcludes>
+              </excludes>
             </configuration>
           </plugin>          
           <plugin>
