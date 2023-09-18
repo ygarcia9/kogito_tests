@@ -90,8 +90,10 @@
             <configuration>
               <excludes>
                 <exclude>**/*Test.java</exclude>
-                <exclude>**/org/acme/travels/quarkus/**/*Test.java</exclude>
                 <exclude>**/test/*</exclude>
+                <exclude>src/test/**</exclude>
+                <exclude>src/test/**/*.java</exclude>
+                <exclude>**/org/acme/travels/quarkus/**/*Test.java</exclude>
               </excludes>
             </configuration>
           </plugin>
@@ -101,9 +103,11 @@
             <version>2.9</version>
             <configuration>
               <excludes>
+                <exclude>**/*Test.java</exclude>
                 <exclude>**/test/*</exclude>
                 <exclude>src/test/**</exclude>
                 <exclude>src/test/**/*.java</exclude>
+                <exclude>**/org/acme/travels/quarkus/**/*Test.java</exclude>
               </excludes>
             </configuration>
           </plugin>
