@@ -10,7 +10,7 @@
   <groupId>com.dani</groupId>
   <version>1.0.0-SNAPSHOT</version>
   <artifactId>ProcessScriptsQuarkus</artifactId>
-  <!--packaging>${packaging.type}</packaging-->
+  <packaging>${packaging.type}</packaging>
   <name>Kogito Example :: Process Scripts With Quarkus</name>
   <description>Kogito scripts invocation - Quarkus</description>
   <properties>
@@ -89,11 +89,22 @@
             <extensions>true</extensions>
             <configuration>
               <excludes>
-                  <exclude>**/*Test.java</exclude>
-                  <exclude>**/org/acme/travels/quarkus/**/*Test.java</exclude>
+                <exclude>**/*Test.java</exclude>
+                <exclude>**/org/acme/travels/quarkus/**/*Test.java</exclude>
+                <exclude>**/test/*</exclude>
               </excludes>
             </configuration>
-          </plugin>          
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>2.9</version>
+            <configuration>
+              <excludes>
+                <exclude>**/test/*</exclude>
+              </excludes>
+            </configuration>
+          </plugin>
           <!--plugin>
             <groupId>org.kie</groupId>
             <artifactId>kie-server-tests</artifactId>
@@ -106,21 +117,11 @@
                 <testExclude>**/org/acme/travels/quarkus/**/*Test.java</testExclude>
               </testExcludes>              
            </configuration>               
-          </plugin>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>2.9</version>
-            <configuration>
-              <excludes>
-                <exclude>**/*Test.java</exclude>
-              </excludes>
-            </configuration>
-          </plugin-->
+          </plugin-->          
         </plugins>
       </build>
       <properties>
-        <packaging.type>kjar</packaging.type>
+        <packaging.type>jar</packaging.type>
         <jms.skip>true</jms.skip>
         <skipITs>true</skipITs>
         <cargo.maven.skip>true</cargo.maven.skip>
