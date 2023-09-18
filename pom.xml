@@ -82,7 +82,7 @@
       </dependencies>
       <build>
         <plugins>
-          <plugin>
+          <!--plugin>
             <groupId>org.kie</groupId>
             <artifactId>kie-maven-plugin</artifactId>
             <version>7.43.1.Final</version>
@@ -91,24 +91,18 @@
               <excludes>
                 <exclude>**/*Test.java</exclude>
                 <exclude>**/test/*</exclude>
-                <exclude>src/test/**</exclude>
-                <exclude>src/test/**/*.java</exclude>
                 <exclude>**/org/acme/travels/quarkus/**/*Test.java</exclude>
               </excludes>
             </configuration>
-          </plugin>
+          </plugin-->
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <version>2.9</version>
-            <configuration>
-              <excludes>
-                <exclude>**/*Test.java</exclude>
-                <exclude>**/test/*</exclude>
-                <exclude>src/test/**</exclude>
-                <exclude>src/test/**/*.java</exclude>
-                <exclude>**/org/acme/travels/quarkus/**/*Test.java</exclude>
-              </excludes>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <!--version>2.9</version-->
+            <configuration>              
+              <testExcludes>
+                <testExclude>**/*</testExclude>
+              </testExcludes>
             </configuration>
           </plugin>
           <!--plugin>
