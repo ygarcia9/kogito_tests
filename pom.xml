@@ -86,7 +86,13 @@
             <groupId>org.kie</groupId>
             <artifactId>kie-maven-plugin</artifactId>
             <version>7.43.1.Final</version>
-            <extensions>true</extensions>            
+            <extensions>true</extensions>
+            <configuration>
+              <excludes>
+                  <exclude>**/*Test.java</exclude>
+                  <exclude>**/org/acme/travels/quarkus/**/*Test.java</exclude>
+              </excludes>
+            </configuration>
           </plugin>          
           <!--plugin>
             <groupId>org.kie</groupId>
