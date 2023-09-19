@@ -87,11 +87,7 @@
             <artifactId>kie-maven-plugin</artifactId>
             <version>7.43.1.Final</version>
             <extensions>true</extensions>
-            <configuration>              
-              <testExcludes>
-                <testExclude>**/*</testExclude>
-              </testExcludes>
-            </configuration>
+            
           </plugin>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -103,14 +99,18 @@
               </testExcludes>
             </configuration>
           </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.1.2</version>
+            <configuration>
+              <skipTests>true</skipTests>
+            </configuration>
+          </plugin>
         </plugins>
       </build>
       <properties>
-        <packaging.type>kjar</packaging.type>
-        <jms.skip>true</jms.skip>
-        <skipITs>true</skipITs>
-        <cargo.maven.skip>true</cargo.maven.skip>
-        <skipTests>true</skipTests>
+        <packaging.type>kjar</packaging.type>        
       </properties>
     </profile>
     <profile>
