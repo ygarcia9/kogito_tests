@@ -64,19 +64,7 @@
           <artifactId>kie-server-services-drools</artifactId>
           <version>7.43.1.Final</version>
           <scope>provided</scope>
-        </dependency>
-        <dependency>
-          <groupId>org.drools</groupId>
-          <artifactId>drools-core</artifactId>
-          <version>7.43.1.Final</version>
-          <scope>provided</scope>
-        </dependency>
-        <dependency>
-          <groupId>org.drools</groupId>
-          <artifactId>drools-compiler</artifactId>
-          <version>7.43.1.Final</version>
-          <scope>provided</scope>
-        </dependency>
+        </dependency>        
         <dependency>
           <groupId>junit</groupId>
           <artifactId>junit</artifactId>
