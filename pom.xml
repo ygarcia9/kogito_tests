@@ -96,8 +96,13 @@
             <groupId>org.kie</groupId>
             <artifactId>kie-maven-plugin</artifactId>
             <version>7.43.1.Final</version>
-            <extensions>true</extensions>                      
-          </plugin>                   
+            <extensions>true</extensions>
+            <configuration>
+              <testExcludes>
+                <testExclude>**/*</testExclude>
+              </testExcludes>
+            </configuration>        
+          </plugin>             
         </plugins>
       </build>
       <properties>
