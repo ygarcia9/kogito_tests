@@ -14,15 +14,94 @@
   <name>Kogito Example :: Process Scripts With Quarkus</name>
   <description>Kogito scripts invocation - Quarkus</description>
   <properties>
-    <packaging.type>kjar</packaging.type>
+    <packaging.type>jar</packaging.type>
     <kie.version>7.61.0.Final</kie.version>
+  
+
+
+    <quarkus-plugin.version>2.16.8.Final</quarkus-plugin.version>
+    <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
+    <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
+    <quarkus.platform.version>2.16.8.Final</quarkus.platform.version>
+    <kogito.bom.group-id>org.kie.kogito</kogito.bom.group-id>
+    <kogito.bom.artifact-id>kogito-bom</kogito.bom.artifact-id>
+    <kogito.bom.version>1.42.0.Final</kogito.bom.version>
+    <version.org.kie.kogito>1.42.0.Final</version.org.kie.kogito>
   </properties>
-  <!--profiles>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>${quarkus.platform.group-id}</groupId>
+        <artifactId>${quarkus.platform.artifact-id}</artifactId>
+        <version>${quarkus.platform.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>${kogito.bom.group-id}</groupId>
+        <artifactId>${kogito.bom.artifact-id}</artifactId>
+        <version>${kogito.bom.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-resteasy</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-resteasy-jackson</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.kie.kogito</groupId>
+      <artifactId>kogito-quarkus</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-smallrye-openapi</artifactId>
+    </dependency>
+    <!--tests -->
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-junit5</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>rest-assured</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-smallrye-health</artifactId>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>${project.artifactId}</finalName> 
+    <plugins>
+      <plugin>
+        <groupId>${quarkus.platform.group-id}</groupId>
+        <artifactId>quarkus-maven-plugin</artifactId>
+        <version>${quarkus-plugin.version}</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>build</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  <profiles>
     <profile>
       <id>kie-server</id>
       <activation>
         <activeByDefault>true</activeByDefault>
-      </activation-->       
+      </activation>       
       <dependencies>
         <dependency>
           <groupId>org.kie</groupId>
@@ -103,11 +182,11 @@
           </plugin>
         </plugins>
       </build>
-      <!--properties>
+      <properties>
         <packaging.type>kjar</packaging.type>        
       </properties>
     </profile>
-    <profile>
+    <!--profile>
       <id>kogito</id>       
       <properties>
         <quarkus-plugin.version>2.16.8.Final</quarkus-plugin.version>
@@ -187,6 +266,6 @@
           </plugin>
         </plugins>
       </build>
-    </profile>
-  </profiles-->  
+    </profile-->
+  </profiles>  
 </project>
