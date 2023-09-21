@@ -115,17 +115,17 @@
             <artifactId>kie-maven-plugin</artifactId>
             <version>7.43.1.Final</version>
             <extensions>true</extensions>  
-            <configuration>
+            <!--configuration>
               <properties>
                 <skipTests>true</skipTests>
                 </properties>
-            </configuration>                  
+            </configuration-->
           </plugin>
         </plugins>
       </build>
       <properties>
         <packaging.type>kjar</packaging.type>
-        <skipTests>true</skipTests>   
+        <!--skipTests>true</skipTests-->
       </properties>
     </profile>
     <profile>
