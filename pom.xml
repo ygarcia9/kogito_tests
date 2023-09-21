@@ -115,11 +115,9 @@
             <artifactId>kie-maven-plugin</artifactId>
             <version>7.43.1.Final</version>
             <extensions>true</extensions>  
-            <!--configuration>
-              <properties>
-                <skipTests>true</skipTests>
-                </properties>
-            </configuration-->
+            <configuration>
+              <skipTests>true</skipTests>
+            </configuration>
           </plugin>
         </plugins>
       </build>
