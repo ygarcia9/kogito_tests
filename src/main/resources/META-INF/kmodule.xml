@@ -1,6 +1,6 @@
-<kmodule xmlns="http://www.drools.org/xsd/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<kbase name="KBase" default="true" eventProcessingMode="stream" equalsBehavior="equality" declarativeAgenda="enabled" 
+<kmodule xmlns="http://www.drools.org/xsd/kmodule" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+<!--kbase name="KBase" default="true" eventProcessingMode="stream" equalsBehavior="equality" declarativeAgenda="enabled" 
     packages="org.dedalus.travel">
     <ksession name="KSession" type="stateful" default="true"/>
   </kbase>
-  </kmodule>
+  </kmodule-->
