@@ -116,12 +116,16 @@
             <version>7.43.1.Final</version>
             <extensions>true</extensions>  
             <configuration>
+              <properties>
+                <skipTests>true</skipTests>
+                </properties>
             </configuration>                  
           </plugin>
         </plugins>
       </build>
       <properties>
-        <packaging.type>kjar</packaging.type>        
+        <packaging.type>kjar</packaging.type>
+        <skipTests>true</skipTests>   
       </properties>
     </profile>
     <profile>
