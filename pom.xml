@@ -225,23 +225,11 @@
       </dependencies>
       <build>
         <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.11.0</version>
-            <configuration>              
-              <testExcludes>
-                <testExclude>**/*</testExclude>
-              </testExcludes>
-            </configuration>
-          </plugin>
           <plugin>                     
             <groupId>org.kie</groupId>
             <artifactId>kie-maven-plugin</artifactId>
             <version>7.43.1.Final</version>
             <extensions>true</extensions>  
-            <configuration>              
-            </configuration>
           </plugin>
         </plugins>
       </build>
