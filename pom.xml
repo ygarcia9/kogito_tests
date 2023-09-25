@@ -12,7 +12,13 @@
   <artifactId>process-quarkus-example</artifactId>
   <packaging>${packaging.type}</packaging>
   <name>Kogito Example :: Process and Quarkus</name>
-  <description>Order management service</description>    
+  <description>Order management service</description>
+  <properties>
+    <customTestSourceDirectory>/src/test/java</customTestSourceDirectory>
+  </properties>
+  <build>
+    <testSourceDirectory>${customTestSourceDirectory}</testSourceDirectory>  
+  </build>    
   <profiles>
     <profile>
       <id>persistence</id>
@@ -77,6 +83,7 @@
         <version.org.kie.kogito>1.44.1.Final</version.org.kie.kogito>
         <packaging.type>jar</packaging.type>
         <group.id>org.kie.kogito.examples</group.id>
+        <!--project.build.testSourceDirectory>src/testKogito</project.build.testSourceDirectory-->
       </properties>
       <dependencyManagement>
         <dependencies>
@@ -142,13 +149,13 @@
           <artifactId>quarkus-smallrye-health</artifactId>
         </dependency>
       </dependencies>
-      <build>
+      <build>        
         <finalName>${project.artifactId}</finalName>
         <plugins>
           <plugin>
             <groupId>${quarkus.platform.group-id}</groupId>
             <artifactId>quarkus-maven-plugin</artifactId>
-            <version>${quarkus-plugin.version}</version>
+            <version>${quarkus-plugin.version}</version>            
             <executions>
               <execution>
                 <goals>
@@ -223,8 +230,7 @@
           <version>1.13.0-1.4-SNAPSHOT</version>
         </dependency-->
       </dependencies>
-      <build>
-        <!--testSourceDirectory>src/main/testKie</testSourceDirectory-->
+      <build>        
         <plugins>
           <plugin>                     
             <groupId>org.kie</groupId>
@@ -238,7 +244,7 @@
         <packaging.type>kjar</packaging.type>
         <kie.version>7.61.0.Final</kie.version>
         <group.id>com.dani</group.id>
-        <project.build.testSourceDirectory>src/main/testKie</project.build.testSourceDirectory>
+        <customTestSourceDirectory>${project.basedir}/src/testKie/java</customTestSourceDirectory>
       </properties>
     </profile>
   </profiles>
