@@ -14,10 +14,16 @@
   <name>Kogito Example :: Process and Quarkus</name>
   <description>Order management service</description>
   <properties>
-    <customTestSourceDirectory>/src/test/java</customTestSourceDirectory>
+    <customTestSourceDirectory>${project.basedir}/src/test/java</customTestSourceDirectory>
+    <customTestResourceDirectory>${project.basedir}/src/test/resources</customTestResourceDirectory>
   </properties>
   <build>
-    <testSourceDirectory>${customTestSourceDirectory}</testSourceDirectory>  
+    <testSourceDirectory>${customTestSourceDirectory}</testSourceDirectory>
+    <testResources>
+      <testResource>
+        <directory>${customTestResourceDirectory}</directory>      
+      </testResource>
+    </testResources>  
   </build>    
   <profiles>
     <profile>
@@ -84,6 +90,8 @@
         <packaging.type>jar</packaging.type>
         <group.id>org.kie.kogito.examples</group.id>
         <!--project.build.testSourceDirectory>src/testKogito</project.build.testSourceDirectory-->
+        <customTestSourceDirectory>${project.basedir}/src/testKogito/java</customTestSourceDirectory>
+        <customTestResourceDirectory>${project.basedir}/src/testKogito/resources</customTestResourceDirectory>
       </properties>
       <dependencyManagement>
         <dependencies>
@@ -151,6 +159,11 @@
       </dependencies>
       <build>        
         <finalName>${project.artifactId}</finalName>
+        <!--testResources>
+          <testResource>
+            <directory>${project.basedir}/src/testKogito/resources</directory>
+          </testResource>
+        </testResources-->
         <plugins>
           <plugin>
             <groupId>${quarkus.platform.group-id}</groupId>
@@ -230,7 +243,12 @@
           <version>1.13.0-1.4-SNAPSHOT</version>
         </dependency-->
       </dependencies>
-      <build>        
+      <build>
+        <!--testResources>
+          <testResource>
+            <directory>${project.basedir}/src/testKieServer/resources</directory>
+          </testResource>
+        </testResources-->
         <plugins>
           <plugin>                     
             <groupId>org.kie</groupId>
@@ -245,6 +263,7 @@
         <kie.version>7.61.0.Final</kie.version>
         <group.id>com.dani</group.id>
         <customTestSourceDirectory>${project.basedir}/src/testKie/java</customTestSourceDirectory>
+        <customTestResourceDirectory>${project.basedir}/src/testKie/resources</customTestResourceDirectory>
       </properties>
     </profile>
   </profiles>
