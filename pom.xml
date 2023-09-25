@@ -90,8 +90,8 @@
         <packaging.type>jar</packaging.type>
         <group.id>org.kie.kogito.examples</group.id>
         <!--project.build.testSourceDirectory>src/testKogito</project.build.testSourceDirectory-->
-        <customTestSourceDirectory>${project.basedir}/src/test/java</customTestSourceDirectory>
-        <customTestResourceDirectory>${project.basedir}/src/test/resources</customTestResourceDirectory>
+        <customTestSourceDirectory>${project.basedir}/src/testKogito/java</customTestSourceDirectory>
+        <customTestResourceDirectory>${project.basedir}/src/testKogito/resources</customTestResourceDirectory>
       </properties>
       <dependencyManagement>
         <dependencies>
