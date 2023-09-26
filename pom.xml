@@ -27,7 +27,6 @@
       </resource-->
       <testResource>
         <directory>${customTestResourceDirectory}</directory>
-        <filtering>true</filtering>            
       </testResource>
     </testResources>  
   </build>    
