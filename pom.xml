@@ -16,12 +16,21 @@
   <properties>
     <customTestSourceDirectory>${project.basedir}/src/test/java</customTestSourceDirectory>
     <customTestResourceDirectory>${project.basedir}/src/test/resources</customTestResourceDirectory>
+    <customTestResourceOutput>${project.basedir}/target</customTestResourceOutput>
   </properties>
   <build>
     <testSourceDirectory>${customTestSourceDirectory}</testSourceDirectory>
+    <testOutputDirectory>target/test-classes</testOutputDirectory>
     <testResources>
+      <!--resource>
+        <directory>${customTestResourceDirectory}</directory>        
+      </resource-->
       <testResource>
-        <directory>${customTestResourceDirectory}</directory>      
+        <directory>${customTestResourceDirectory}</directory>
+        <filtering>true</filtering>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>          
       </testResource>
     </testResources>  
   </build>    
