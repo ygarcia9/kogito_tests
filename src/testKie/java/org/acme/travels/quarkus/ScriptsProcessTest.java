@@ -15,21 +15,6 @@
  */
 package org.acme.travels.quarkus;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.inject.Inject;
-import javax.inject.Named;
-
-import org.junit.jupiter.api.Test;
-import org.kie.kogito.Model;
-import org.kie.kogito.process.Process;
-import org.kie.kogito.process.ProcessInstance;
-
-import io.quarkus.test.junit.QuarkusTest;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 
 public class ScriptsProcessTest {
