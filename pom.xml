@@ -90,8 +90,8 @@
         <packaging.type>jar</packaging.type>
         <group.id>org.kie.kogito.examples</group.id>
         <!--project.build.testSourceDirectory>src/testKogito</project.build.testSourceDirectory-->
-        <customTestSourceDirectory>${project.basedir}/src/testKogito/java</customTestSourceDirectory>
-        <customTestResourceDirectory>${project.basedir}/src/testKogito/resources</customTestResourceDirectory>
+        <!--customTestSourceDirectory>${project.basedir}/src/testKogito/java</customTestSourceDirectory>
+        <customTestResourceDirectory>${project.basedir}/src/testKogito/resources</customTestResourceDirectory-->
       </properties>
       <dependencyManagement>
         <dependencies>
@@ -262,8 +262,8 @@
         <packaging.type>kjar</packaging.type>
         <kie.version>7.61.0.Final</kie.version>
         <group.id>com.dani</group.id>
-        <customTestSourceDirectory>${project.basedir}/src/testKie/java</customTestSourceDirectory>
-        <customTestResourceDirectory>${project.basedir}/src/testKie/resources</customTestResourceDirectory>
+        <customTestSourceDirectory>${project.basedir}/src/testKie1/java</customTestSourceDirectory>
+        <customTestResourceDirectory>${project.basedir}/src/testKie1/resources</customTestResourceDirectory>
       </properties>
     </profile>
   </profiles>
