@@ -14,6 +14,7 @@
   <name>Kogito Example :: Process and Quarkus</name>
   <description>Order management service</description>
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <packaging.type>jar</packaging.type>
     <customGroupId>org.kie.kogito.examples</customGroupId>
     <customTestSourceDirectory>${project.basedir}/src/test/java</customTestSourceDirectory>
@@ -261,8 +262,8 @@
         <packaging.type>kjar</packaging.type>
         <kie.version>7.61.0.Final</kie.version>
         <customGroupId>com.dani</customGroupId>
-        <customTestSourceDirectory>${project.basedir}/src/testKie/kie</customTestSourceDirectory>
-        <customTestResourceDirectory>${project.basedir}/src/testKie/kie</customTestResourceDirectory>
+        <customTestSourceDirectory>${project.basedir}/src/testKie/java</customTestSourceDirectory>
+        <customTestResourceDirectory>${project.basedir}/src/testKie/resources</customTestResourceDirectory>
       </properties>
     </profile>
   </profiles>
