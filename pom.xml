@@ -261,8 +261,8 @@
         <packaging.type>kjar</packaging.type>
         <kie.version>7.61.0.Final</kie.version>
         <customGroupId>com.dani</customGroupId>
-        <customTestSourceDirectory>${project.basedir}/src/test/kie</customTestSourceDirectory>
-        <customTestResourceDirectory>${project.basedir}/src/test/kie</customTestResourceDirectory>
+        <customTestSourceDirectory>${project.basedir}/src/testKie/kie</customTestSourceDirectory>
+        <customTestResourceDirectory>${project.basedir}/src/testKie/kie</customTestResourceDirectory>
       </properties>
     </profile>
   </profiles>
