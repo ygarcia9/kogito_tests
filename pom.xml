@@ -91,7 +91,7 @@
         <kogito.bom.artifact-id>kogito-bom</kogito.bom.artifact-id>
         <kogito.bom.version>1.44.1.Final</kogito.bom.version>
         <version.org.kie.kogito>1.44.1.Final</version.org.kie.kogito>
-        <customTestSourceDirectory>${project.basedir}/src/testKogito/java</customTestSourceDirectory>
+        <customTestSourceDirectory>${project.basedir}/src/testKogito</customTestSourceDirectory>
         <customTestResourceDirectory>${project.basedir}/src/testKogito/resources</customTestResourceDirectory>
       </properties>
       <dependencyManagement>
