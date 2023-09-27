@@ -7,16 +7,17 @@
     <artifactId>kogito-quarkus-examples</artifactId>
     <version>1.44.1.Final</version>
   </parent-->
-  <groupId>${group.id}</groupId>
+  <groupId>${customGroupId}</groupId>
   <version>1.0.0-SNAPSHOT</version>
   <artifactId>process-quarkus-example</artifactId>
   <packaging>${packaging.type}</packaging>
   <name>Kogito Example :: Process and Quarkus</name>
   <description>Order management service</description>
   <properties>
+    <packaging.type>jar</packaging.type>
+    <customGroupId>org.kie.kogito.examples</customGroupId>
     <customTestSourceDirectory>${project.basedir}/src/test/java</customTestSourceDirectory>
-    <customTestResourceDirectory>${project.basedir}/src/test/resources</customTestResourceDirectory>
-    <customTestResourceOutput>${project.basedir}/target</customTestResourceOutput>
+    <customTestResourceDirectory>${project.basedir}/src/test/resources</customTestResourceDirectory>    
   </properties>
   <build>
     <testSourceDirectory>${customTestSourceDirectory}</testSourceDirectory>
@@ -91,9 +92,7 @@
         <kogito.bom.group-id>org.kie.kogito</kogito.bom.group-id>
         <kogito.bom.artifact-id>kogito-bom</kogito.bom.artifact-id>
         <kogito.bom.version>1.44.1.Final</kogito.bom.version>
-        <version.org.kie.kogito>1.44.1.Final</version.org.kie.kogito>
-        <packaging.type>jar</packaging.type>
-        <group.id>org.kie.kogito.examples</group.id>
+        <version.org.kie.kogito>1.44.1.Final</version.org.kie.kogito>        
         <!--project.build.testSourceDirectory>src/testKogito</project.build.testSourceDirectory-->
         <!--customTestSourceDirectory>${project.basedir}/src/testKogito/java</customTestSourceDirectory>
         <customTestResourceDirectory>${project.basedir}/src/testKogito/resources</customTestResourceDirectory-->
@@ -248,12 +247,7 @@
           <version>1.13.0-1.4-SNAPSHOT</version>
         </dependency-->
       </dependencies>
-      <build>
-        <!--testResources>
-          <testResource>
-            <directory>${project.basedir}/src/testKieServer/resources</directory>
-          </testResource>
-        </testResources-->
+      <build>        
         <plugins>
           <plugin>                     
             <groupId>org.kie</groupId>
@@ -266,9 +260,9 @@
       <properties>
         <packaging.type>kjar</packaging.type>
         <kie.version>7.61.0.Final</kie.version>
-        <group.id>com.dani</group.id>
-        <customTestSourceDirectory>${project.basedir}/src/testKie/java</customTestSourceDirectory>
-        <customTestResourceDirectory>${project.basedir}/src/testKie/resources</customTestResourceDirectory>
+        <customGroupId>com.dani</customGroupId>
+        <customTestSourceDirectory>${project.basedir}/src/test/kie</customTestSourceDirectory>
+        <customTestResourceDirectory>${project.basedir}/src/test/kie</customTestResourceDirectory>
       </properties>
     </profile>
   </profiles>
