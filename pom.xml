@@ -15,23 +15,7 @@
     <packaging.type>kjar</packaging.type>
     <kie.version>7.61.0.Final</kie.version>
     <customGroupId>com.dani</customGroupId>
-  </properties>
-  <build>
-    <testSourceDirectory>${customTestSourceDirectory}</testSourceDirectory>    
-    <testResources>      
-      <testResource>
-        <directory>${customTestResourceDirectory}</directory>        
-      </testResource>
-    </testResources> 
-    <plugins>
-      <plugin>                     
-        <groupId>org.kie</groupId>
-        <artifactId>kie-maven-plugin</artifactId>
-        <version>7.43.1.Final</version>
-        <extensions>true</extensions>  
-      </plugin>
-    </plugins> 
-  </build>    
+  </properties>  
   <dependencies>
     <dependency>
       <groupId>org.kie</groupId>
@@ -94,5 +78,21 @@
       <groupId>org.kie.workbench.services</groupId>
       <artifactId>kie-wb-common-services-backend</artifactId>
     </dependency>
-  </dependencies>     
+  </dependencies>
+  <build>
+    <testSourceDirectory>${customTestSourceDirectory}</testSourceDirectory>    
+    <testResources>      
+      <testResource>
+        <directory>${customTestResourceDirectory}</directory>        
+      </testResource>
+    </testResources> 
+    <plugins>
+      <plugin>                     
+        <groupId>org.kie</groupId>
+        <artifactId>kie-maven-plugin</artifactId>
+        <version>7.43.1.Final</version>
+        <extensions>true</extensions>  
+      </plugin>
+    </plugins> 
+  </build>         
 </project>
