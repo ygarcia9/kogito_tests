@@ -45,7 +45,7 @@
       <version>${kie.version}</version>
       <scope>provided</scope>
     </dependency>
-    <!--dependency>
+    <dependency>
       <groupId>org.optaplanner</groupId>
       <artifactId>optaplanner-core</artifactId>
       <version>${kie.version}</version>
@@ -56,7 +56,7 @@
       <artifactId>optaplanner-persistence-jaxb</artifactId>
       <version>${kie.version}</version>
       <scope>provided</scope>
-    </dependency-->
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -89,10 +89,10 @@
       <artifactId>ohc-jbpm-workitems-patient</artifactId>
       <version>1.13.0-1.4-SNAPSHOT</version>
     </dependency-->
-    <!--dependency>
+    <dependency>
       <version>${kie.version}</version>
       <groupId>org.kie.workbench.services</groupId>
       <artifactId>kie-wb-common-services-backend</artifactId>
-    </dependency-->
+    </dependency>
   </dependencies>     
 </project>
