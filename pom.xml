@@ -18,8 +18,8 @@
     <!--project.build.testSourceDirectory>src/testKogito</project.build.testSourceDirectory-->
     <packaging.type>jar</packaging.type>
     <customGroupId>org.kie.kogito.examples</customGroupId>
-    <customTestSourceDirectory>${project.basedir}/src/test/java</customTestSourceDirectory>
-    <customTestResourceDirectory>${project.basedir}/src/test/resources</customTestResourceDirectory>    
+    <customTestSourceDirectory>${project.basedir}/src/test/java/kie</customTestSourceDirectory>
+    <customTestResourceDirectory>${project.basedir}/src/test/resources/kie</customTestResourceDirectory>    
   </properties>
   <build>
     <testSourceDirectory>${customTestSourceDirectory}</testSourceDirectory>    
@@ -91,8 +91,8 @@
         <kogito.bom.artifact-id>kogito-bom</kogito.bom.artifact-id>
         <kogito.bom.version>1.44.1.Final</kogito.bom.version>
         <version.org.kie.kogito>1.44.1.Final</version.org.kie.kogito>
-        <customTestSourceDirectory>${project.basedir}/src/test/kogito</customTestSourceDirectory>
-        <customTestResourceDirectory>${project.basedir}/src/test/kogito/resources</customTestResourceDirectory>
+        <customTestSourceDirectory>${project.basedir}/src/test/java/kogito</customTestSourceDirectory>
+        <customTestResourceDirectory>${project.basedir}/src/test/java/kogito/resources</customTestResourceDirectory>
       </properties>
       <dependencyManagement>
         <dependencies>
