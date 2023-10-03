@@ -45,7 +45,7 @@
       <version>${kie.version}</version>
       <scope>provided</scope>
     </dependency>
-    <dependency>
+    <!--dependency>
       <groupId>org.optaplanner</groupId>
       <artifactId>optaplanner-core</artifactId>
       <version>${kie.version}</version>
@@ -56,7 +56,7 @@
       <artifactId>optaplanner-persistence-jaxb</artifactId>
       <version>${kie.version}</version>
       <scope>provided</scope>
-    </dependency>
+    </dependency-->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
