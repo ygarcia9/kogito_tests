@@ -263,7 +263,7 @@
           <artifactId>org.osgi.framework</artifactId>
           <version>1.10.0</version>
         </dependency>
-        <!--dependency>
+        <dependency>
           <groupId>org.codehaus.jackson</groupId>
           <artifactId>jackson-xc</artifactId>
           <version>1.9.13</version>
@@ -282,7 +282,7 @@
           <groupId>org.codehaus.jackson</groupId>
           <artifactId>jackson-jaxrs</artifactId>
           <version>1.9.13</version>
-        </dependency-->
+        </dependency>
       </dependencies>
       <build>        
         <plugins>
