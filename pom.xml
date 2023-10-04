@@ -252,13 +252,13 @@
           <artifactId>freemarker</artifactId>
           <version>2.3.14</version>
         </dependency> 
-        <!--dependency>
+        <dependency>
           <groupId>org.python</groupId>
           <artifactId>jython-standalone</artifactId>
           <version>2.7.2</version>
           <scope>compile</scope>
       </dependency>
-        <dependency>
+        <!--dependency>
           <groupId>org.codehaus.jackson</groupId>
           <artifactId>jackson-xc</artifactId>
           <version>1.9.13</version>
