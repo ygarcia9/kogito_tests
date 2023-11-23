@@ -2,6 +2,11 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
+  <!--parent>
+    <groupId>org.kie.kogito.examples</groupId>
+    <artifactId>kogito-quarkus-examples</artifactId>
+    <version>1.44.1.Final</version>
+  </parent-->
   <groupId>${customGroupId}</groupId>
   <version>1.0.0-SNAPSHOT</version>
   <artifactId>process-quarkus-example</artifactId>
@@ -16,22 +21,6 @@
     <kie.version>7.61.0.Final</kie.version>
     <customGroupId>com.dani</customGroupId>  
   </properties>
-  <build>
-    <testSourceDirectory>${customTestSourceDirectory}</testSourceDirectory>    
-    <testResources>      
-      <testResource>
-        <directory>${customTestResourceDirectory}</directory>        
-      </testResource>
-    </testResources>
-    <plugins>
-      <plugin>                     
-        <groupId>org.kie</groupId>
-        <artifactId>kie-maven-plugin</artifactId>
-        <version>7.43.1.Final</version>
-        <extensions>true</extensions>  
-      </plugin>
-    </plugins>  
-  </build>  
   <dependencies>
     <dependency>
       <groupId>org.kie</groupId>
@@ -68,26 +57,74 @@
       <artifactId>xstream</artifactId>
       <version>1.4.11.1</version>
       <scope>test</scope>
-    </dependency>
-    <!--dependency>
-      <groupId>com.dxc.ohc</groupId>
-      <artifactId>ohc-fhir-models</artifactId>
-      <version>1.12.0-1.2-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>com.dxc.ohc</groupId>
-      <artifactId>ohc-fhir-utils</artifactId>
-      <version>1.12.0-1.2-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>com.dxc.ohc</groupId>
-      <artifactId>ohc-jbpm-utils</artifactId>
-      <version>1.12.0-1.2-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>com.dxc.ohc</groupId>
-      <artifactId>ohc-jbpm-workitems-patient</artifactId>
-      <version>1.13.0-1.4-SNAPSHOT</version>
-    </dependency-->    
-  </dependencies>
+    </dependency>        
+  </dependencies>    
+  <!--profiles>
+    <profile>
+      <id>persistence</id>
+      <activation>
+        <property>
+          <name>persistence</name>
+        </property>
+      </activation>
+      <properties>
+        <enable.resource.infinispan>true</enable.resource.infinispan>
+      </properties>
+      <dependencies>
+        <dependency>
+          <groupId>org.kie.kogito</groupId>
+          <artifactId>kogito-addons-quarkus-persistence-infinispan</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
+    <profile>
+      <id>events</id>
+      <activation>
+        <property>
+          <name>events</name>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <configuration>
+              <systemPropertyVariables>
+                <enable.resource.kafka>true</enable.resource.kafka>
+              </systemPropertyVariables>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+      <properties>
+        <enable.resource.kafka>true</enable.resource.kafka>
+      </properties>
+      <dependencies>
+        <dependency>
+          <groupId>org.kie.kogito</groupId>
+          <artifactId>kogito-addons-quarkus-events-process</artifactId>
+        </dependency>
+        <dependency>
+          <groupId>io.quarkus</groupId>
+          <artifactId>quarkus-smallrye-reactive-messaging-kafka</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>    
+  </profiles-->
+  <build>
+    <testSourceDirectory>${customTestSourceDirectory}</testSourceDirectory>    
+    <testResources>      
+      <testResource>
+        <directory>${customTestResourceDirectory}</directory>        
+      </testResource>
+    </testResources>
+    <plugins>
+      <plugin>                     
+        <groupId>org.kie</groupId>
+        <artifactId>kie-maven-plugin</artifactId>
+        <version>7.43.1.Final</version>
+        <extensions>true</extensions>  
+      </plugin>
+    </plugins>
+  </build>
 </project>
