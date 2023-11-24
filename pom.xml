@@ -76,6 +76,9 @@
     </profile>
     <profile>
       <id>kogito</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
       <properties>
         <quarkus-plugin.version>2.16.10.Final</quarkus-plugin.version>
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
@@ -171,10 +174,7 @@
       </build>
     </profile>
     <profile>
-      <id>kie-server</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
+      <id>kie-server</id>      
       <properties>
         <packaging.type>kjar</packaging.type>
         <kie.version>7.61.0.Final</kie.version>
