@@ -2,12 +2,7 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <!--parent>
-    <groupId>org.kie.kogito.examples</groupId>
-    <artifactId>kogito-quarkus-examples</artifactId>
-    <version>1.44.1.Final</version>
-  </parent-->
-  <groupId>${customGroupId}</groupId>
+  <groupId>com.dani</groupId>
   <version>1.0.0-SNAPSHOT</version>
   <artifactId>process-quarkus-example</artifactId>
   <packaging>${packaging.type}</packaging>
@@ -16,7 +11,6 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <packaging.type>jar</packaging.type>
-    <customGroupId>org.kie.kogito.examples</customGroupId>    
     <quarkus-plugin.version>2.16.10.Final</quarkus-plugin.version>
     <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
     <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
@@ -27,59 +21,7 @@
     <version.org.kie.kogito>1.44.1.Final</version.org.kie.kogito>
     <customTestSourceDirectory>${project.basedir}/src/test/java/kogito</customTestSourceDirectory>
     <customTestResourceDirectory>${project.basedir}/src/test/java/kogito/resources</customTestResourceDirectory>
-  </properties>      
-  <profiles>
-    <profile>
-      <id>persistence</id>
-      <activation>
-        <property>
-          <name>persistence</name>
-        </property>
-      </activation>
-      <properties>
-        <enable.resource.infinispan>true</enable.resource.infinispan>
-      </properties>
-      <dependencies>
-        <dependency>
-          <groupId>org.kie.kogito</groupId>
-          <artifactId>kogito-addons-quarkus-persistence-infinispan</artifactId>
-        </dependency>
-      </dependencies>
-    </profile>
-    <profile>
-      <id>events</id>
-      <activation>
-        <property>
-          <name>events</name>
-        </property>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <configuration>
-              <systemPropertyVariables>
-                <enable.resource.kafka>true</enable.resource.kafka>
-              </systemPropertyVariables>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-      <properties>
-        <enable.resource.kafka>true</enable.resource.kafka>
-      </properties>
-      <dependencies>
-        <dependency>
-          <groupId>org.kie.kogito</groupId>
-          <artifactId>kogito-addons-quarkus-events-process</artifactId>
-        </dependency>
-        <dependency>
-          <groupId>io.quarkus</groupId>
-          <artifactId>quarkus-smallrye-reactive-messaging-kafka</artifactId>
-        </dependency>
-      </dependencies>
-    </profile>
-  </profiles>      
+  </properties>
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -106,6 +48,10 @@
     <dependency>
       <groupId>org.kie.kogito</groupId>
       <artifactId>kogito-addons-quarkus-process-management</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.kie.kogito</groupId>
+      <artifactId>kogito-drools-model</artifactId>
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
@@ -143,15 +89,15 @@
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-smallrye-health</artifactId>
     </dependency>
-  </dependencies>
-  <build>
+  </dependencies>    
+  <build>        
+    <finalName>${project.artifactId}</finalName> 
     <testSourceDirectory>${customTestSourceDirectory}</testSourceDirectory>    
     <testResources>      
       <testResource>
         <directory>${customTestResourceDirectory}</directory>        
       </testResource>
-    </testResources>  
-    <finalName>${project.artifactId}</finalName>        
+    </testResources>        
     <plugins>
       <plugin>
         <groupId>${quarkus.platform.group-id}</groupId>
